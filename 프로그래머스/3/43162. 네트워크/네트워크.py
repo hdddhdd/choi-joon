@@ -1,7 +1,6 @@
 def solution(n, computers):
     visited = [False] * n
     count = 0
-    
     for i in range(n):
         if not visited[i]:
             stack = [i]
@@ -13,7 +12,6 @@ def solution(n, computers):
                         if not visited[j] and computers[node][j]==1:
                             stack.append(j)
             count += 1
-    
-    
+        
     print(count)
     return count
